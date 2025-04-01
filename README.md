@@ -1,1 +1,1 @@
-# Burger Shop backend
+# Burger Shop
