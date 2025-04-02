@@ -1,48 +1,42 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
-  <div class="container">
-    <a class="navbar-brand" href="#"
-      ><img
-        src="/assets/images/logo-design-1.jpeg"
-        alt="Logo"
-        draggable="false"
-        height="30"
-    /></a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-collapse-init
-      data-mdb-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-      (click)="toggleCollapsed()"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-    <div id="navbarSupportedContent"
-    [ngClass]="{'collapse':collapsed, 'navbar-collapse':true}">
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="#!"
-            ><i class="fas fa-plus-circle pe-2"></i>Home</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="#!"
-            ><i class="fas fa-bell pe-2"></i>Items</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="#!"
-            ><i class="fas fa-heart pe-2"></i>Cart</a
-          >
-        </li>
-        <li class="nav-item ms-3">
-          <a class="btn btn-outline-dark btn-rounded">Sign in</a>
-        </li>
-      </ul>
+<section *ngIf="!isLoaded">
+  <mat-spinner class="loader"></mat-spinner>
+</section>
+<section *ngIf="isLoaded">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"
+        ><img src="/assets/images/logo-design-1.jpeg" alt="logo"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="navbar-active"
+            [routerLinkActiveOptions]="{exact:true}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/items" routerLinkActive="navbar-active"
+            [routerLinkActiveOptions]="{exact:true}">Items</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart" routerLinkActive="navbar-active"
+            [routerLinkActiveOptions]="{exact:true}">Cart</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-dark ms-2" type="submit" id="loginBtn">
+          LogIn
+        </button>
+      </div>
     </div>
-  </div>
-</nav>
-<!-- Navbar -->
+  </nav>
+</section>
