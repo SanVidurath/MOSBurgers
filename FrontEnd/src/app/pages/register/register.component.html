@@ -1,0 +1,59 @@
+<div class="p-3">
+  <h2 class="text-center mb-4">Register Here</h2>
+
+  <form class="p-3">
+    <div class="form-outline mb-3">
+      <input
+        type="text"
+        class="form-control form-control-lg"
+        placeholder="Name"
+        autocomplete="off"
+        [(ngModel)]="name"
+        name="name"
+      />
+    </div>
+    <div class="form-outline mb-3">
+      <input
+        type="email"
+        class="form-control form-control-lg"
+        placeholder="Email address"
+        autocomplete="off"
+        [(ngModel)]="email"
+        name="email"
+      />
+    </div>
+    <div class="form-outline mb-3">
+      <input
+        type="text"
+        class="form-control form-control-lg"
+        placeholder="Password"
+        autocomplete="off"
+        [(ngModel)]="password"
+        name="password"
+      />
+    </div>
+    <div class="form-outline mb-4">
+      <input
+        type="text"
+        class="form-control form-control-lg"
+        placeholder="Confirm Password"
+        autocomplete="off"
+        [(ngModel)]="confirmPassword"
+        name="confirmPassword"
+      />
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center gap-2">
+      <button type="button" class="btn btn-secondary" (click)="onNoClick()">
+        Close
+      </button>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        (click)="registerEmployee()"
+      >
+        Register
+      </button>
+    </div>
+  </form>
+</div>
