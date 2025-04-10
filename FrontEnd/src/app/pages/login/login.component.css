@@ -5,12 +5,3 @@
   background-color: black;
 }
 
-span.register{
-  color: rgb(13, 110, 253);
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.no-radius-dialog .mat-dialog-container {
-  border-radius: 0 !important;
-}
