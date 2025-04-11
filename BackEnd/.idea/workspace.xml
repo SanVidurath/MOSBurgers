@@ -5,29 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d55de4a-8719-4ed4-ba61-18bc0761051d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/config/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/dto/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/impl/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/dto/OrderDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/dto/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/entity/OrderDetailEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/entity/OrderDetailsId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/entity/OrderEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/entity/ProductEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/repository/custom/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/util/ItemType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/util/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/util/JwtUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/dto/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/dto/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/entity/CustomerEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/entity/EmployeeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/repository/custom/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/repository/custom/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/util/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/dto/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/dto/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/entity/CustomerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/entity/CustomerEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/repository/custom/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/repository/custom/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/login/login.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/models/Employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/models/Employee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/items/items.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/items/items.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/items/items.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/items/items.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/register/register.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/register/register.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/register/register.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/services/EmployeeService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/services/EmployeeService.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +45,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -63,9 +72,15 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sandeepa/Desktop/Projects/MOSBurgers/BackEnd/src/main/java/edu/icet/ecom/entity&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Sandeepa/Desktop/Projects/MOSBurgers/BackEnd/src/main/java/edu/icet/ecom/Main.java&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sandeepa\Desktop\Projects\MOSBurgers\BackEnd\src\main\java\edu\icet\ecom\entity" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.icet.ecom.Main" />

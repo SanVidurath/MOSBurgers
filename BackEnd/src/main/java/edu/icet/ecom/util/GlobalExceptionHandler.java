@@ -1,4 +1,4 @@
-package edu.icet.ecom;
+package edu.icet.ecom.util;
 
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;

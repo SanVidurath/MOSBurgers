@@ -6,4 +6,8 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
+
+jwt:
+  secret: 8U.#~rl;#.Q*M0&g=H1nZ9xHnjB7£G
+  expiration: 36000000
