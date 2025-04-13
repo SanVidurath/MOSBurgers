@@ -14,8 +14,9 @@
   <div class="card-body text-end">
     <h5 class="card-title text-center">{{ item.itemName }}</h5>
     <p class="card-text text-center">Rs.{{ item.unitPrice }}</p>
-    <a href="#" class="btn btn-success"
-      ><i class="fa-solid fa-cart-shopping">+</i></a
+    <a class="btn btn-success" (click)="addToCart(item)"
+      ><fa-icon [icon]="faCartShopping"></fa-icon><span>+</span>
+      </a
     >
   </div>
 </div>

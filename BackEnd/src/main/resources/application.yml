@@ -9,5 +9,5 @@ spring:
       ddl-auto: update
 
 jwt:
-  secret: 8U.#~rl;#.Q*M0&g=H1nZ9xHnjB7£G
+  secret: H_sTPR<Po(d(&6$3gUt(amAO/X?s2)KS2x3WV9ie
   expiration: 36000000

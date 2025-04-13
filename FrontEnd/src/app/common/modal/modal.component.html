@@ -1,0 +1,66 @@
+<div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Checkout Details</h5>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modalRef.close()"
+    ></button>
+  </div>
+
+  <div class="modal-body">
+    <form>
+        <div class="mb-3">
+            <input 
+            type="text"
+            class="form-control"
+            autocomplete="off"
+            placeholder="Enter customer name"
+            [(ngModel)]="customer.name"
+            name="customerName">
+        </div>
+        <div class="mb-3">
+            <input type="email"
+            class="form-control"
+            autocomplete="off"
+            placeholder="Enter customer email"
+            [(ngModel)]="customer.email"
+            name="customerEmail">
+        </div>
+        <div class="mb-3">
+            <input type="tel"
+            class="form-control"
+            autocomplete="off"
+            placeholder="Enter customer phone number"
+            [(ngModel)]="customer.phoneNumber"
+            name="customerPhoneNumber">
+        </div>
+
+        <div class="mb-3">
+            <select
+            class="form-select"
+            [(ngModel)]="selectedEmployeeId"
+            name="employeeId"
+            (change)="onEmployeeChange()"
+            >
+            <option
+            *ngFor="let emp of listOfEmployees" 
+            [value]="emp.id">{{emp.id}}</option>
+        </select>
+        </div>
+
+        <div class="mb-3">
+            <input type="text"
+            class="form-control"
+            [value]="selectedEmployeeName"
+            disabled>
+        </div>
+    </form>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modalRef.close()">
+      Close
+    </button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div>

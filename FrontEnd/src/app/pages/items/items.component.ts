@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../models/Product';
 import { ProductService } from '../../services/ProductService';
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule} from '@angular/common';
 import { ItemCardComponent } from '../../common/item-card/item-card.component';
 
 @Component({

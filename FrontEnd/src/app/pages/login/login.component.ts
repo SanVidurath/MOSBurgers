@@ -21,6 +21,7 @@ export class LoginComponent {
     this.http.post<any>(`${env.baseUrl}/login`, {email: this.email, password: this.password}).subscribe({
       next: response => {
         Swal.fire('Successfully logged In',response.message, 'success')
+        localStorage.setItem('token', response.token);
         this.router.navigate(['dashboard'])},
       error: error => Swal.fire('Error',error.error?.error||'Login failed', 'error')
   })}
