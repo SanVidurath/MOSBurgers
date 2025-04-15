@@ -6,25 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4d55de4a-8719-4ed4-ba61-18bc0761051d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/ecom/service/custom/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/common/item-card/item-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/common/item-card/item-card.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/common/item-card/item-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/common/item-card/item-card.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/common/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/common/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/cart/cart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/cart/cart.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/cart/cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/cart/cart.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/items/items.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/items/items.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/items/items.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/items/items.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/app/pages/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/app/pages/register/register.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

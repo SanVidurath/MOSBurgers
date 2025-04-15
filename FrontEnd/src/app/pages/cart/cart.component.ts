@@ -86,6 +86,19 @@ export class CartComponent implements OnInit{
 
 
   openModal() {
-    this.modalRef = this.modalService.open(ModalComponent)
+    if(this.totalPrice===0){
+      Swal.fire('Error', "Cart is empty", 'error');
+      return;
+    }
+    this.modalRef = this.modalService.open(ModalComponent,{
+      modalClass: 'modal-dialog-centered',
+      data: {
+        totalPrice: this.totalPrice,
+      },
+      
+      backdrop: true,
+      keyboard:false,
+      ignoreBackdropClick: true,
+    })
   }
 }
