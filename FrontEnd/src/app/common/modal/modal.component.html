@@ -41,6 +41,34 @@
       />
     </div>
 
+    <div class="mb-3 text-center">
+      <button type="button" class="btn btn-primary" (click)="registerCustomer()">Save Customer</button>
+    </div>
+
+    <div class="mb-3">
+      <select
+        class="form-select"
+        [(ngModel)]="selectedCustomerId"
+        name="customerId"
+        (change)="onCustomerChange()"
+      > 
+        <option [ngValue]="null">Select customer id</option>
+        <option *ngFor="let customer of listOfCustomers" [value]="customer.id">
+          {{ customer.id }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Customer name"
+        [value]="selectedCustomerName"
+        disabled
+      />
+    </div>
+
     <div class="mb-3">
       <select
         class="form-select"
@@ -49,8 +77,8 @@
         (change)="onEmployeeChange()"
       > 
         <option [ngValue]="null">Select employee id</option>
-        <option *ngFor="let emp of listOfEmployees" [value]="emp.id">
-          {{ emp.id }}
+        <option *ngFor="let employee of listOfEmployees" [value]="employee.id">
+          {{ employee.id }}
         </option>
       </select>
     </div>
@@ -81,7 +109,7 @@
     <div class="mb-3">
       <mat-form-field>
         <mat-label>Payment Method</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)]="selectedPaymentType" name="paymentType">
           @for (paymentType of paymentTypes; track paymentType) {
           <mat-option [value]="paymentType.value">{{ paymentType.viewValue }}</mat-option>
           }
@@ -95,5 +123,5 @@
   <button type="button" class="btn btn-secondary" (click)="modalRef.close()">
     Close
   </button>
-  <button type="button" class="btn btn-primary">Save changes</button>
+  <button type="button" class="btn btn-primary" (click)="submitOrder()">Save changes</button>
 </div>

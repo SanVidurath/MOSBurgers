@@ -23,8 +23,21 @@ public class ProductServiceImpl implements ProductService {
         ArrayList<Product> productList = new ArrayList<>();
         List<ProductEntity> productEntityList = productRepository.findAll();
 
-        productEntityList.forEach(productEntity ->
-                productList.add(modelMapper.map(productEntity, Product.class)));
+        productEntityList.forEach(productEntity ->{
+            Product product = new Product();
+            product.setId(productEntity.getId());
+            product.setItemCode(productEntity.getItemCode());
+            product.setItemName(productEntity.getItemName());
+            product.setItemType(productEntity.getItemType());
+            product.setDiscount(productEntity.getDiscount());
+            product.setQuantityInStock(productEntity.getQuantityInStock());
+            product.setUnitPrice(productEntity.getUnitPrice());
+            product.setOrderDetails(new ArrayList<>());
+
+            productList.add(product);
+        });
+
+
 
         return productList;
     }

@@ -5,13 +5,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Map;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrderDetail {
-    private Product product;
+public class OrderRequest {
     private Order order;
-    private Double unitPrice;
-    private Integer quantityPurchased;
+    private Map<Integer, Integer> productIdToQuantityMap;
 }

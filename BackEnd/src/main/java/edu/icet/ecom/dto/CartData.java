@@ -5,13 +5,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrderDetail {
-    private Product product;
-    private Order order;
-    private Double unitPrice;
-    private Integer quantityPurchased;
+public class CartData {
+    private List<Customer> customers;
+    private List<Employee> employees;
 }
