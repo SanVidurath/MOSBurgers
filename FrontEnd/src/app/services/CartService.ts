@@ -7,48 +7,54 @@ import { Customer } from '../models/Customer';
 import { Order } from '../models/Order';
 import { Observable } from 'rxjs';
 
-
 @Injectable({
-    providedIn:'root',
+  providedIn: 'root',
 })
 export class CartService {
-    private cart:Product[] = [];
-    private baseUrl = `${env.baseUrl}`;
-    constructor(private http:HttpClient){}
+  private cart: Product[] = [];
+  private baseUrl = `${env.baseUrl}`;
+  constructor(private http: HttpClient) {}
 
-    addToCart(product:Product):boolean{
-        const exists = this.cart.some(p=>p.itemCode===product.itemCode);
-        if(!exists){
-            this.cart.push(product);
-            return true;
-        }
-        return false
+  addToCart(product: Product): boolean {
+    const exists = this.cart.some((p) => p.itemCode === product.itemCode);
+    if (!exists) {
+      this.cart.push(product);
+      return true;
     }
+    return false;
+  }
 
-    removeFromCart(index:number):void{
-        if(index!==-1){
-            this.cart.splice(index,1);
-        }
+  removeFromCart(index: number): void {
+    if (index !== -1) {
+      this.cart.splice(index, 1);
     }
+  }
 
-    addCustomer(customer: Customer) {
-        return this.http.post(`${this.baseUrl}/cart`, customer, {
-          responseType: 'text',
-        });
-      }
+  removeAll():void{
+    this.cart.length=0;
+  }
 
-    getCart():Product[]{
-        return this.cart;
-    }
+  addCustomer(customer: Customer) {
+    return this.http.post(`${this.baseUrl}/cart/customer`, customer, {
+      responseType: 'text',
+    });
+  }
 
-    getData(){
-        return this.http.get<CartData>(`${this.baseUrl}/cart`);
-    }
+  getCart(): Product[] {
+    return this.cart;
+  }
 
-    placeOrder(order: Order, productIdToQuantityMap: { [id: number]: number }):Observable<any> {
-        let payload = {order, productIdToQuantityMap};
-        return this.http.post(`${this.baseUrl}/cart`, payload, {
-            responseType: 'text',
-        });
-    }
+  getData() {
+    return this.http.get<CartData>(`${this.baseUrl}/cart`);
+  }
+
+  placeOrder(
+    order: Order,
+    productIdToQuantityMap: { [id: number]: number }
+  ): Observable<any> {
+    let payload = { order, productIdToQuantityMap };
+    return this.http.post(`${this.baseUrl}/cart`, payload, {
+      responseType: 'text',
+    });
+  }
 }

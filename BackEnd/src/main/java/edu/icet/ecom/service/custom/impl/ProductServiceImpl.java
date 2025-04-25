@@ -41,4 +41,16 @@ public class ProductServiceImpl implements ProductService {
 
         return productList;
     }
+
+    @Override
+    public void update(Product product) {
+        ProductEntity productEntity = productRepository.findById(product.getId())
+                .orElseThrow(() -> new RuntimeException("Product not found " + product.getId()));
+
+        productEntity.setQuantityInStock(product.getQuantityInStock());
+        productEntity.setDiscount(product.getDiscount());
+        productEntity.setUnitPrice(product.getUnitPrice());
+
+        productRepository.save(productEntity);
+    }
 }

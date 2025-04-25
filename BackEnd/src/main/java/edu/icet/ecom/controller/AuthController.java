@@ -1,6 +1,6 @@
 package edu.icet.ecom.controller;
 
-import edu.icet.ecom.util.JwtUtil;
+//import edu.icet.ecom.util.JwtUtil;
 import edu.icet.ecom.dto.LoginRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -24,7 +24,7 @@ import java.util.Map;
 public class AuthController {
 
     private final AuthenticationManager authenticationManager;
-    private final JwtUtil jwtUtil;
+//    private final JwtUtil jwtUtil;
     private final UserDetailsService userDetailsService;
 
     @PostMapping("/login")
@@ -37,9 +37,9 @@ public class AuthController {
                             loginRequest.getPassword())
             );
             UserDetails userDetails = userDetailsService.loadUserByUsername(loginRequest.getEmail());
-            String token = jwtUtil.generateToken(userDetails);
+//            String token = jwtUtil.generateToken(userDetails);
 
-            response.put("token", token);
+//            response.put("token", token);
             response.put("message", "Login successful");
             return ResponseEntity.status(HttpStatus.OK).body(response);
 

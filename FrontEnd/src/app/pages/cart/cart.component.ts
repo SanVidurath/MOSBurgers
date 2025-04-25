@@ -11,6 +11,8 @@ import {
   MdbModalService,
 } from 'mdb-angular-ui-kit/modal';
 import { ModalComponent } from '../../common/modal/modal.component';
+import { Router} from '@angular/router';
+import { AddCustomerComponent } from '../add-customer/add-customer.component';
 
 
 @Component({
@@ -24,10 +26,12 @@ export class CartComponent implements OnInit {
   cartItems: CartItem[] = [];
   totalPrice: number = 0;
   modalRef: MdbModalRef<ModalComponent> | null = null;
+  modalRefCustomer: MdbModalRef<AddCustomerComponent> | null = null;
 
   constructor(
     private cartService: CartService,
     private modalService: MdbModalService,
+    private router: Router,
   ) {
     this.products = this.cartService.getCart();
     this.products.forEach((product) => {
@@ -112,6 +116,22 @@ export class CartComponent implements OnInit {
       keyboard: false,
       ignoreBackdropClick: true,
     });
+  }
+
+  openCustomerModal(){
+    this.router.navigate(['/cart/customer']).then(()=>{
+      this.modalRefCustomer = this.modalService.open(AddCustomerComponent,{
+        modalClass:'modal-dialog-centered',
+        backdrop: true,
+        keyboard: false,
+        ignoreBackdropClick: true
+      });
+
+      this.modalRefCustomer.onClose.subscribe(()=>{
+        this.router.navigate(['/cart'])
+      })
+    });
+    
   }
 
   

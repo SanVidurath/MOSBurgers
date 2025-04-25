@@ -77,55 +77,6 @@ export class ModalComponent {
     { value: 'card', viewValue: 'Card' },
   ];
 
-  registerCustomer(): void {
-    let customer: Customer = {
-      id: null,
-      name: this.customer.name,
-      email: this.customer.email,
-      phoneNo: this.customer.phoneNumber,
-    };
-    this.cartService.addCustomer(customer).subscribe({
-      next: () => {
-        Swal.fire(
-          'Registered!',
-          'Customer successfully registered.',
-          'success'
-        );
-        this.cartService.getData().subscribe((data: CartData) => {
-          this.listOfCustomers = data['customers'];
-        });
-      },
-      error: (err) => {
-        if (err.status === 400 && err.error) {
-          let errorMessage = '';
-          let errorObj;
-
-          try {
-            errorObj =
-              typeof err.error === 'string' ? JSON.parse(err.error) : err.error;
-          } catch (e) {
-            console.error('Error parsing error response', e);
-            errorObj = {};
-          }
-
-          if (typeof errorObj === 'object' && errorObj !== null) {
-            errorMessage = Object.values(errorObj).join('<br>');
-          } else {
-            errorMessage = 'An unexpected error occurred';
-          }
-
-          Swal.fire('Error', errorMessage.trim(), 'error');
-        } else {
-          Swal.fire(
-            'Error',
-            'Something went wrong. Please try again.',
-            'error'
-          );
-        }
-      },
-    });
-  }
-
   submitOrder(): void {
     if (
       this.selectedEmployeeId &&
@@ -152,6 +103,7 @@ export class ModalComponent {
         next: () => {
           Swal.fire('Success', 'Order submitted successfully!', 'success');
           this.cartItems.length = 0;
+          this.cartService.removeAll();
           this.modalRef.close();
         },
         error: (err) => {

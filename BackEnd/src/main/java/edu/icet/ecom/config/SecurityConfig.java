@@ -34,7 +34,9 @@ public class SecurityConfig {
                         auth.requestMatchers("/register").permitAll()
                                 .requestMatchers("/login").permitAll()
                                 .requestMatchers("/cart").permitAll()
+                                .requestMatchers("/cart/customer").permitAll()
                                 .requestMatchers("/items").permitAll()
+                                .requestMatchers("/dashboard").permitAll()
                                 .anyRequest().authenticated()
                 )
                 .sessionManagement(session->

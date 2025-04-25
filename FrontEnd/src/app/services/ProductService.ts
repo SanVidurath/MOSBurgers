@@ -5,14 +5,20 @@ import { Product } from '../models/Product';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root', 
+  providedIn: 'root',
 })
 export class ProductService {
-    private baseUrl = `${env.baseUrl}`;
+  private baseUrl = `${env.baseUrl}`;
 
-    constructor(private http:HttpClient) {}
+  constructor(private http: HttpClient) {}
 
-    loadProducts(): Observable<Product[]> {
-        return this.http.get<Product[]>(`${this.baseUrl}/items`);
-    }
+  loadProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.baseUrl}/items`);
+  }
+
+  addProduct(product: any) {
+    return this.http.post(`${this.baseUrl}/dashboard`, product, {
+      responseType: 'text',
+    });
+  }
 }

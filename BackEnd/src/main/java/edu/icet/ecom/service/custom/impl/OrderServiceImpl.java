@@ -8,6 +8,7 @@ import edu.icet.ecom.repository.custom.OrderDetailRepository;
 import edu.icet.ecom.repository.custom.OrderRepository;
 import edu.icet.ecom.repository.custom.ProductRepository;
 import edu.icet.ecom.service.custom.OrderService;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -24,6 +25,7 @@ public class OrderServiceImpl implements OrderService {
     private final ModelMapper modelMapper;
 
     @Override
+    @Transactional
     public void placeOrder(Order order, Map<Integer, Integer> productIdToQuantityMap) {
 
         OrderEntity savedOrder = orderRepository.save(modelMapper.map(order, OrderEntity.class));

@@ -5,6 +5,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AddCustomerComponent } from './pages/add-customer/add-customer.component';
 
 export const routes: Routes = [
   {
@@ -18,6 +19,12 @@ export const routes: Routes = [
   {
     path: 'cart',
     component: CartComponent,
+    children: [
+      {
+        path:'customer',
+        component: AddCustomerComponent
+      }
+    ]
   },
   {
     path: 'login',
