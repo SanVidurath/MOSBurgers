@@ -1,7 +1,7 @@
 # Burger Shop - Point of Sale (POS) system for a restaurant
 
 ## Overview
-Point of Sale (POS) system for a restaurant
+A full-stack POS system tailored for restaurants, enabling smooth order processing and management. The application features a user-friendly Angular frontend integrated with a robust Spring Boot backend, built on a monolithic, layered architecture. It offers a seamless experience with secure authentication, efficient data handling, and clean separation of concerns for maintainability and scalability.
 
 ## Features
 * User-Friendly UI using Angular
