@@ -1,4 +1,4 @@
-# Burger Shop
+# Burger Shop - Point of Sale (POS) system for a restaurant
 
 ## Overview
 Point of Sale (POS) system for a restaurant
